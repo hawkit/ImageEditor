@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="image_edit_item_title">
+        <item>亮度</item>
+        <item>对比度</item>
+        <item>饱和度</item>
+        <item>色温</item>
+    </string-array>
+</resources>
