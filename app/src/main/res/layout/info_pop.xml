@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="@dimen/activity_vertical_margin"
+              android:layout_height="225dp"
+    android:background="@android:color/white">
+    <EditText
+        android:id="@+id/brand"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="品牌"/>
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="价格"/>
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="哪里买"/>
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:text="完成"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

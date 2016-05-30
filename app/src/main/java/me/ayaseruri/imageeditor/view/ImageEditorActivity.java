@@ -61,6 +61,8 @@ public class ImageEditorActivity extends AppCompatActivity implements IntentCons
     Toolbar mToolbar;
     @ViewById(R.id.seek_bar_pop)
     SeekBarPopup mSeekBarPopup;
+    @ViewById(R.id.image_tag)
+    ImageTagView mImageTag;
 
     @StringArrayRes(R.array.image_edit_item_title)
     String[] mImageEditItemTitle;
@@ -77,6 +79,7 @@ public class ImageEditorActivity extends AppCompatActivity implements IntentCons
     private GPUImageSaturationFilter mSaturationFilter;
     private GPUImageContrastFilter mContrastFilter;
     private GPUImageFilterGroup mFilterGroup;
+    private boolean isAddTag = true;
 
     @AfterViews
     void init(){
@@ -182,19 +185,24 @@ public class ImageEditorActivity extends AppCompatActivity implements IntentCons
                 switch (title){
                     case TAB_TAG:
                         mTagHint.setVisibility(View.VISIBLE);
+                        isAddTag = true;
                         break;
                     case TAB_Filter:
                         mEditTitle.setVisibility(View.VISIBLE);
                         mRecyclerView.setVisibility(View.VISIBLE);
+                        isAddTag = false;
                         break;
                     case TAB_Edit:
                         mRecyclerView.setVisibility(View.VISIBLE);
                         mRecyclerView.setAdapter(mEditAdapter);
                         mEditAdapter.refresh(Arrays.asList(mImageEditItemTitle));
+                        isAddTag = false;
                         break;
                     default:
                         break;
                 }
+
+                mImageTag.setEnbale(isAddTag);
             }
 
             @Override

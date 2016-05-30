@@ -47,6 +47,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/edit_bar"/>
+
+    <me.ayaseruri.imageeditor.view.ImageTagView
+        android:id="@+id/image_tag"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/edit_bar" />
     
     <RelativeLayout
         android:id="@+id/edit_bar"
